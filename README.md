@@ -12,7 +12,7 @@
 
 # Sample Project
 
-ororobot – Android: Es una aplicación desarrollada en Android que usa streaming bajo la tecnología de WebRTC (Web Real-Time Communications) que permite a la aplicación la comunicación en tiempo real en audio/vídeo entre aplicaciones y sitios web.
+Tororobot – Android: Es una aplicación desarrollada en Android que usa streaming bajo la tecnología de WebRTC (Web Real-Time Communications) que permite a la aplicación la comunicación en tiempo real en audio/vídeo entre aplicaciones y sitios web.
 
 Tecnologías Utilizadas: ButterKnife, Dagger, Amitshekhar Networking, GSON, Picasso, Icepick, MaterialDialogs, Autobanh, JinglePeerConnection
 
