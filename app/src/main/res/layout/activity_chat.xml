@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".chat.ChatActivity">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimary"-->
+    <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:text="Chat"-->
+    <!--android:textColor="#ffffff"-->
+    <!--android:textSize="25sp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_disconnect"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@null"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="DISCONNECT"-->
+    <!--android:textColor="#ffffff" />-->
+    <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_device_mac"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_connect_state"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:singleLine="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#666666" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="234dp">
+
+        <TextView
+            android:id="@+id/tv_chat_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/up_camera"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_keyboard_arrow_up_white_24dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/left_camera"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp" />
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/switch_camera"
+                        app:srcCompat="@drawable/ic_camera_alt_black_48dp" />
+
+                </LinearLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/right_camera"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/down_camera"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_container2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/up_move"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_keyboard_arrow_up_white_24dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/left_move"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp" />
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/switch_camera"
+                        app:srcCompat="@drawable/ic_open_with_black_48dp" />
+
+                </LinearLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/right_move"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/down_move"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

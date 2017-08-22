@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:paddingLeft="@dimen/activity_horizontal_margin_login"
+    android:paddingRight="@dimen/activity_horizontal_margin_login"
+    tools:context="com.tororobot.login.LoginFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="2dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/logo_tororobot"
+                        tools:ignore="contentDescription" />
+
+                    <!-- Email -->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/input_layout_email"
+                        android:layout_alignStart="@+id/input_layout_email"
+                        android:layout_below="@+id/input_layout_email">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/password"
+                            android:inputType="textPassword" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/logo"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_toEndOf="@+id/logo"
+                        android:layout_toRightOf="@+id/logo">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/text_login"
+                            android:layout_marginTop="50dp"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/input_layout_password"
+                        android:layout_alignStart="@+id/input_layout_password"
+                        android:layout_below="@+id/logo"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/secondary_text2" />
+
+                    <TextView
+                        android:id="@+id/text_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/input_layout_email"
+                        android:layout_alignLeft="@+id/input_layout_email"
+                        android:layout_alignStart="@+id/input_layout_email"
+                        android:layout_marginLeft="61dp"
+                        android:layout_marginStart="61dp"
+                        android:text="@string/title_activity_log_in"
+                        android:textColor="@color/secondary_text2"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/input_layout_password"
+                        android:clickable="true"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/ic_check_white_24dp" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

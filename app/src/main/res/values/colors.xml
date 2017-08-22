@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#2196f3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#03A9F4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="secondary_text2">#444444</color>
+
+
+    <!-- Color Message-->
+    <color name="success">#3ADB76</color>
+    <color name="success_press">#22BB5B</color>
+    <color name="warning">#ffae00</color>
+    <color name="warning_press">#CC8B00</color>
+    <color name="alert">#ec5840</color>
+    <color name="alert_press">#DA3116</color>
+    <color name="info">#2199E8</color>
+    <color name="info_press">#1585CF</color>
+    <color name="bg_bubble_self">#E1E1E1</color>
+</resources>

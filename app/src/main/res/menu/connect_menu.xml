@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+    <!--android:id="@+id/action_loopback"-->
+    <!--android:icon="@drawable/ic_loopback_call"-->
+    <!--android:showAsAction="always"-->
+    <!--android:title="@string/action_loopback" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/action_chat"-->
+        <!--android:icon="@drawable/ic_bluetooth_red_50_24dp"-->
+        <!--android:title="@string/action_chat"-->
+        <!--app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+</menu>

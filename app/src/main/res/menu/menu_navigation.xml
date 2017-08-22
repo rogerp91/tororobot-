@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainItem"
+        android:icon="@drawable/ic_home"
+        android:title="@string/main" />
+
+    <!--<item-->
+        <!--android:id="@+id/callItem"-->
+        <!--android:icon="@drawable/ic_call_black_24dp"-->
+        <!--android:title="@string/call" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/bluetoothItem"-->
+        <!--android:icon="@drawable/ic_bluetooth_black_24dp"-->
+        <!--android:title="@string/establish" />-->
+
+    <item
+        android:id="@+id/meItem"
+        android:icon="@drawable/ic_person"
+        android:title="@string/me" />
+
+
+</menu>

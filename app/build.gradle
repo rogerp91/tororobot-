@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+def getBuildDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyMMddhhmm')
+    def formatInt = formattedDate as int;
+    return (formatInt) as int
+}
+
+// Se usa cuando se libera el producto, v = versión
+def vMayor = 1
+def vMenor = 0
+def vPatch = 1
+
+def SNAPSHOT = 0
+def RC = 0
+
+//
+def vMayorTest = 1
+def vMenorTest = 0
+def vPatchTest = 78
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
+
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+
+    defaultConfig {
+        applicationId "com.tororobot"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode vMayorTest
+        versionName "${vMayorTest}.${vMenorTest}.${vPatchTest}.${getBuildDate()}"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            //            versionNameSuffix "_RC${versionRC}"
+            debuggable false
+            minifyEnabled true
+            proguardFiles = buildTypes.debug.proguardFiles
+//            signingConfig signingConfigs.release
+        }
+        debug {
+            versionNameSuffix "_debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+
+    compile files('libs/autobanh.jar')
+    compile files('libs/libjingle_peerconnection.jar')
+
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:cardview-v7:25.0.1'
+    compile 'frankiesardo:icepick:3.2.0'
+    compile 'com.squareup.dagger:dagger:1.2.5'
+    compile 'com.squareup.dagger:dagger-compiler:1.2.5'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.android.support:support-annotations:25.0.1'
+    compile 'com.github.rogerp91:MlProgress:0.0.3'
+    compile 'com.github.rogerp91:prefs-shared:0.0.1'
+    compile 'com.afollestad.material-dialogs:core:0.9.0.2'
+    compile 'com.lovedise:permissiongen:0.0.6'
+    compile 'com.pixplicity.sharp:library:1.0.2@aar'
+    compile 'com.android.support:design:25.0.1'
+    compile 'io.palaima:smoothbluetooth:0.1.0'
+    compile 'com.github.florent37:diagonallayout:1.0.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    provided 'frankiesardo:icepick-processor:3.2.0'
+    compile 'de.greenrobot:eventbus:2.2.0'
+    compile 'co.lujun:lmbluetoothsdk:1.0.2'
+}
